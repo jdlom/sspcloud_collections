@@ -4,8 +4,7 @@ echo "execution of $@"
 
 #dirty method to find the user
 THE_USER=$(find /home -name "lost+found" | cut -d "/" -f3)
-
-THE_USER=${USERS[$THE_USER]:-root}
+export THE_USER=${THE_USER:-root}
 
 echo user detected is $THE_USER
 

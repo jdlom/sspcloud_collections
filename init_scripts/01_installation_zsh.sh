@@ -13,7 +13,7 @@ runuser -l $THE_USER -c ' git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh
   chsh -s $(which zsh)'
 
 #extra step for rstudio
-if [ "$(THE_USER)" == "rstudio" ]; then
+if [ "$THE_USER" == "rstudio" ]; then
 echo \
     "
     setHook('rstudio.sessionInit', function(newSession) {
