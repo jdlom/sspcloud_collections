@@ -9,7 +9,7 @@ export THE_USER=${THE_USER:-root}
 echo user detected is $THE_USER
 
 REPO='sspcloud_collections'
-BRANCH='dev'
+BRANCH='main'
 git clone https://github.com/jdlom/$REPO/ /tmp/$REPO/
 cd /tmp/$REPO/
 git checkout $BRANCH
