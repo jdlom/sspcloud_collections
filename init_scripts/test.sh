@@ -14,4 +14,4 @@ THE_USER=${USERS[$THE_USER]}
 echo $THE_USER
 
 runuser -l $THE_USER -c 'sh -c \
-"$(curl -fsSL https://raw.github.com/jdlom/sspcloud_collection/dev/init_script/01_installation_zsh.sh)"'
+"$(curl -fsSL https://raw.githubusercontent.com/jdlom/sspcloud_collections/dev/init_scripts/01_installation_zsh.sh)"'
