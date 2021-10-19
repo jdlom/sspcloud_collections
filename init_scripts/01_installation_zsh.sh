@@ -9,8 +9,8 @@ sudo apt install -y zsh
 
 # install oh my zsh
 runuser -l $THE_USER -c ' git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
-  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc &&\
-  chsh -s $(which zsh)'
+  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc'
+sudo chsh $THE_USER -s $(which zsh)
 
 #extra step for rstudio
 if [ "$THE_USER" == "rstudio" ]; then
