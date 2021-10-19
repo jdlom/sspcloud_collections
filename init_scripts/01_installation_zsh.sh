@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
+echo "execution of $@"
+
 # install zsh
+echo installation zsh
 sudo apt-get update
 sudo apt install -y zsh
 
-git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-chsh -s $(which zsh)
+# install oh my zsh
+runuser -l $THE_USER -c ' git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
+  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc &&\
+  chsh -s $(which zsh)'
 
 #extra step for rstudio
-if [ "$(whoami)" == "rstudio" ]; then
+if [ "$(THE_USER)" == "rstudio" ]; then
 echo \
     "
     setHook('rstudio.sessionInit', function(newSession) {
