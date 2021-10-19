@@ -8,6 +8,7 @@ sudo apt-get update
 sudo apt install -y zsh
 
 # install oh my zsh
+echo install oh my zh
 runuser -l $THE_USER -c ' git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc'
 sudo chsh $THE_USER -s $(which zsh)
