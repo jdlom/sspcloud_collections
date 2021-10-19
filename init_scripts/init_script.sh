@@ -16,5 +16,5 @@ git checkout $BRANCH
 
 INIT_FOLDER='init_scripts'
 for f in $(ls -I init_script.sh $FOLDER); do
-bash "$INIT_FOLDER/$f"
+bash "$f"
 done
