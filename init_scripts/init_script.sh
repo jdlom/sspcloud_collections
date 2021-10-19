@@ -2,12 +2,8 @@
 
 echo "execution of $@"
 
-THE_USER=$(echo $KUBERNETES_SERVICE_ACCOUNT | cut -d '-' -f 1)
-declare -A USERS
-USERS=(
-  ["rstudio"]="rstudio" 
-  ["ubuntu"]="headless" 
-  ["cloushell"]="root")
+#dirty method to find the user
+THE_USER=$(find /home -name "lost+found" | cut -d "/" -f3)
 
 THE_USER=${USERS[$THE_USER]:-root}
 
