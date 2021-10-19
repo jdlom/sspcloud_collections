@@ -23,5 +23,5 @@ echo \
             rstudioapi::writeRStudioPreference('posix_terminal_shell', 'zsh')
         }
     }, action = 'append')
-    " >> ~/.Rprofile
+    " >> /home/rstudio/.Rprofile
 fi
