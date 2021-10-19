@@ -15,6 +15,6 @@ cd /tmp/$REPO/
 git checkout $BRANCH
 
 INIT_FOLDER='init_scripts'
-for f in $(ls -I init_script.sh $FOLDER); do
-bash "$f"
+for f in $(ls -I init_script.sh $INIT_FOLDER); do
+bash "$INIT_FOLDER/$f"
 done
