@@ -11,8 +11,8 @@ sudo apt install -y zsh
 echo install oh my zh
 git clone https://github.com/ohmyzsh/ohmyzsh.git /home/$THE_USER/.oh-my-zsh
 cp /home/$THE_USER/.oh-my-zsh/templates/zshrc.zsh-template /home/$THE_USER/.zshrc
-
-chown -R $THE_USER:$THE_USER /home/$THE_USER
+chown -R $THE_USER:$THE_USER /home/.oh-my-zsh
+chown  $THE_USER:$THE_USER /home/$THE_USER/.zshrc
 
 sudo chsh $THE_USER -s $(which zsh)
 
@@ -28,4 +28,6 @@ echo \
         }
     }, action = 'append')
     " >> /home/rstudio/.Rprofile
+chown -R $THE_USER:$THE_USER /home/$THE_USER
 fi
+
