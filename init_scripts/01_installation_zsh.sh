@@ -9,8 +9,11 @@ sudo apt install -y zsh
 
 # install oh my zsh
 echo install oh my zh
-runuser -l $THE_USER -c ' git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh && \
-  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc'
+git clone https://github.com/ohmyzsh/ohmyzsh.git /home/$THE_USER/.oh-my-zsh
+cp /home/$THE_USER/.oh-my-zsh/templates/zshrc.zsh-template /home/$THE_USER/.zshrc
+
+chown -R $THE_USER:$THE_USER /home/$THE_USER
+
 sudo chsh $THE_USER -s $(which zsh)
 
 #extra step for rstudio
