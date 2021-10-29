@@ -1,17 +1,25 @@
 #!/usr/bin/env bash
 
+mkdir -p /home/$THE_USER/parcours-r && \
+    cd /home/$THE_USER/parcours-r
+
+#authenticate
+gh auth login --with-token $GH_TOKEN
+
 # fork repo from MTES-MCT
-runuser -l $THE_USER -c "gh auth login && gh repo list MTES-MCT -L 3000 |
+gh repo list MTES-MCT -L 3000 |
     grep -e parcours_r -e savoirfr |
     awk '{print $1}' |
-    xargs -n1 -I _repository gh repo fork _repository --clone --remote"
+    xargs -n1 -I _repository gh repo fork _repository --clone --remote
 
 # sync already forked repo
-REPO=$(runuser -l $THE_USER -c "gh auth login && gh repo list -L 3000 |
+REPO=`gh repo list -L 3000 |
     grep -e parcours_r -e savoirfr |
-    awk '{print $1}'")
+    awk '{print $1}'`
 
 # main or main branch
-runuser -l $THE_USER -c "gh auth login && echo -n $REPO | xargs -t -d ' ' -I _repo gh repo sync _repo"
+echo -n $REPO | xargs -t -d ' ' -I _repo gh repo sync _repo
 # dev branch
-runuser -l $THE_USER -c "gh auth login && echo -n $REPO | xargs -t -d ' ' -I _repo gh repo sync --branch dev _repo"
+echo -n $REPO | xargs -t -d ' ' -I _repo gh repo sync --branch dev _repo
+
+chown -R $THE_USER:$THE_USER /home/$THE_USER/parcours-r
