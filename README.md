@@ -29,6 +29,6 @@ Créer un secret `git_token`
 [![](https://img.shields.io/badge/SSPCloud-RStudio-blue)](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/rstudio?autoLaunch=true&onyxia.friendlyName=«rstudio-zsh»&security.allowlist.enabled=false&vault.secret=«git%2Fgit_token»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fjdlom%2Fsspcloud_collections%2Fmain%2Finit_scripts%2Finit_script.sh»)
 
 
-[![](https://img.shields.io/badge/SSPCloud-VScode-blue)](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/vscode?autoLaunch=true&onyxia.friendlyName=«vscode-zsh»&security.whitelist.enable=false&vault.secret=«git%2Fgit_token»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fjdlom%2Fsspcloud_collections%2Fmain%2Finit_scripts%2Finit_script.sh»)
+[![](https://img.shields.io/badge/SSPCloud-VScode-blue)](https://datalab.sspcloud.fr/launcher/inseefrlab-helm-charts-datascience/vscode?autoLaunch=true&onyxia.friendlyName=«vscode-zsh»&security.allowlist.enable=false&vault.secret=«git%2Fgit_token»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fjdlom%2Fsspcloud_collections%2Fmain%2Finit_scripts%2Finit_script.sh»)
 
 
